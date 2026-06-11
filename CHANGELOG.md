@@ -2,6 +2,16 @@
 
 All notable changes to Gameball Android SDK are documented here
 
+## [3.2.0] - 2026-06-11 📱
+
+> **Minor Release**: Widget event channel, widget dismissal controls, and external-link handling
+
+### ✨ Added
+- 🏗️ **Widget Event Channel**: `ShowProfileRequest.widgetEventCallback` receives events posted from the widget (e.g. game completion) as a `Map<String, Object>` `{type, metadata}` payload
+- 🏗️ **Web-Initiated Close**: the widget can dismiss its own webview via `window.GameballWidget.closeWidget()`
+- 🏗️ **Host-Initiated Dismiss**: new `GameballApp.hideProfile()` dismisses the widget programmatically (no-op when nothing is shown)
+- ⚙️ **External-Link Handling**: links flagged `gbExternalBrowser=true` open in the system browser; optional `externalLinkCallback` lets the host intercept them
+
 ## [3.1.1] - 2025-12-15 🔧
 
 > **Patch Release**: Guest mode support for profile widget
